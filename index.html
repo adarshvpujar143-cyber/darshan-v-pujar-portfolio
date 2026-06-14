@@ -3,318 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darshan V Pujar | BBA Portfolio</title>
+    <title>Darshan V Pujar | Professional Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary: #0f2b46; 
-            --secondary: #d4af37; 
-            --text-dark: #222222;
-            --text-light: #555555;
-            --bg-light: #f4f6f9;
-            --white: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-            padding-bottom: 60px;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, #1a4a75 100%);
-            color: var(--white);
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 5px solid var(--secondary);
-        }
-
-        .header-container h1 {
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .tagline {
-            color: var(--secondary);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .contact-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 8px;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .contact-line {
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-        }
-
-        .contact-line:last-child {
-            margin-bottom: 0;
-        }
-
-        .contact-box a {
-            color: var(--white);
-            text-decoration: none;
-            border-bottom: 1px dashed var(--secondary);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-
-        section {
-            background: var(--white);
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--primary);
-        }
-
-        h2 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-bottom: 2px solid var(--bg-light);
-            padding-bottom: 5px;
-        }
-
-        .section-desc {
-            color: var(--text-light);
-            margin-bottom: 10px;
-        }
-
-        .grid-list {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-        }
-
-        @media (min-width: 600px) {
-            .grid-list {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .grid-item {
-            background: var(--bg-light);
-            padding: 15px;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            border-left: 3px solid var(--secondary);
-        }
-
-        .grid-item-title {
-            color: var(--primary);
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-
-        .edu-item {
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px dashed #ddd;
-        }
-
-        .edu-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .edu-title {
-            font-weight: bold;
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        .edu-meta {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-top: 2px;
-        }
-
-        .badge {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin-top: 5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            background: var(--white);
-            border-top: 1px solid #ddd;
-            margin-top: 40px;
-        }
-
-        .connect-btn {
-            background-color: var(--secondary);
-            color: var(--primary);
-            border: none;
-            padding: 12px 20px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: transform 0.2s;
-            width: 100%;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .connect-btn:active {
-            transform: scale(0.98);
-        }
-
-        .counter-text {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        #viewCounter {
-            font-weight: bold;
-            color: var(--primary);
+        html { scroll-behavior: smooth; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <header>
-        <div class="header-container">
-            <h1>DARSHAN V PUJAR</h1>
-            <p class="tagline">BBA Graduate &amp; Business Professional</p>
-            <div class="contact-box">
-                <div class="contact-line">📍 Mysore, Karnataka 570023</div>
-                <div class="contact-line">📞 <a href="tel:7204704002">7204704002</a></div>
-                <div class="contact-line">✉️ <a href="mailto:darshanpujar35@gmail.com">darshanpujar35@gmail.com</a></div>
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="text-xl font-bold tracking-tight text-blue-400">DARSHAN V PUJAR</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#travel-mart" class="hover:text-blue-400 transition-colors">Travel Mart 2026</a>
+                <a href="#education" class="hover:text-blue-400 transition-colors">Education & Skills</a>
+                <a href="#certifications" class="hover:text-blue-400 transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="about" class="hero-gradient text-white py-24 px-4 text-center relative overflow-hidden">
+        <div class="max-w-3xl mx-auto relative z-10">
+            <span class="bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full">BBA Graduate</span>
+            <h1 class="text-4xl sm:text-5xl font-black tracking-tight mt-4 mb-6">DARSHAN V PUJAR</h1>
+            <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
+                Results-driven BBA graduate with hands-on internship experience in marketing, event management, and direct sales. Proven ability to lead teams, execute branding campaigns, and build customer relationships.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-blue-500/20 transition-all flex items-center gap-2">
+                    <i class="fa-solid var(--fa-envelope)"></i> Get In Touch
+                </a>
+                <a href="#experience" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-6 py-3 rounded-lg transition-all">
+                    View Portfolio Work
+                </a>
             </div>
         </div>
     </header>
 
-    <div class="container">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
 
-        <section>
-            <h2>Career Objective</h2>
-            <p class="section-desc">Motivated and detail-oriented BBA student seeking an entry-level position that leverages strong communication, time management, and teamwork skills. Eager to contribute to organizational growth while developing professional expertise in a dynamic and challenging environment.</p>
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs">
+            <div class="text-center p-2">
+                <div class="text-blue-600 mb-2"><i class="fa-solid fa-users text-2xl"></i></div>
+                <h4 class="font-bold text-slate-900 text-sm">Leadership</h4>
+                <p class="text-xs text-slate-500 mt-1">Team & Brand Supervision</p>
+            </div>
+            <div class="text-center p-2">
+                <div class="text-blue-600 mb-2"><i class="fa-solid fa-chart-line text-2xl"></i></div>
+                <h4 class="font-bold text-slate-900 text-sm">Campaigns</h4>
+                <p class="text-xs text-slate-500 mt-1">Execution & Activation</p>
+            </div>
+            <div class="text-center p-2">
+                <div class="text-blue-600 mb-2"><i class="fa-solid fa-handshake text-2xl"></i></div>
+                <h4 class="font-bold text-slate-900 text-sm">Sales & B2B</h4>
+                <p class="text-xs text-slate-500 mt-1">Customer Acquisition</p>
+            </div>
+            <div class="text-center p-2">
+                <div class="text-blue-600 mb-2"><i class="fa-solid fa-microchip text-2xl"></i></div>
+                <h4 class="font-bold text-slate-900 text-sm">Next-Gen Tech</h4>
+                <p class="text-xs text-slate-500 mt-1">IoT & AI Competent</p>
+            </div>
         </section>
 
-        <section>
-            <h2>Education</h2>
+        <section id="experience" class="scroll-mt-20">
+            <div class="border-l-4 border-blue-600 pl-4 mb-8">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Work Experience</h2>
+                <p class="text-slate-500 mt-1">On-ground execution and professional exposure</p>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+                <div class="p-6 sm:p-8 bg-slate-900 text-white flex flex-wrap justify-between items-start gap-4">
+                    <div>
+                        <span class="bg-blue-500 text-white text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">Internship</span>
+                        <h3 class="text-2xl font-bold mt-2">Marketing & Event Management Supervisor</h3>
+                        <p class="text-blue-400 font-semibold mt-1"><i class="fa-solid fa-building mr-1"></i> Sunrise Marketing</p>
+                    </div>
+                    <div class="text-right sm:text-right text-slate-400 text-sm bg-slate-800 px-4 py-2 rounded-xl border border-slate-700">
+                        <i class="fa-solid fa-calendar-days mr-1"></i> Sep 2025 - Nov 2025
+                    </div>
+                </div>
+
+                <div class="p-6 sm:p-8">
+                    <h4 class="font-bold text-slate-900 mb-4 text-lg">Key Responsibilities & Contributions</h4>
+                    <ul class="space-y-3 text-slate-600 mb-8">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-blue-600 mt-1 shrink-0"></i> Led on-ground event management and field marketing campaigns, supervising team coordination and brand activation initiatives.</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-blue-600 mt-1 shrink-0"></i> Executed direct sales and customer acquisition strategies with a focus on relationship building and product promotions.</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-blue-600 mt-1 shrink-0"></i> Coordinated branding drives, visibility initiatives, and product sampling campaigns to maximize audience engagement and achieve promotional goals.</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-blue-600 mt-1 shrink-0"></i> Recognized by corporate management for demonstrating great enthusiasm, structural responsibility, and tactical creativity throughout the assignment.</li>
+                    </ul>
+
+                    <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider text-slate-400">Media & Verification Verification Documents</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-slate-100 rounded-xl overflow-hidden border border-slate-200 group">
+                            <img src="sunrise.jpg" alt="Sunrise Marketing Documents" class="w-full h-64 object-cover group-hover:scale-102 transition-transform duration-300" onerror="this.parentNode.innerHTML='<div class=\'w-full h-64 bg-slate-100 flex flex-col items-center justify-center text-slate-400 p-4\'><i class=\'fa-solid fa-file-image text-3xl mb-2\'></i><span class=\'font-medium text-sm\'>sunrise.jpg</span><span class=\'text-xs text-center mt-1 text-slate-400\'>[Image Viewable when hosted locally]</span></div>'">
+                            <div class="p-3 text-center bg-slate-50 border-t border-slate-200 text-xs font-semibold text-slate-600">Internship Record File 1</div>
+                        </div>
+                        <div class="bg-slate-100 rounded-xl overflow-hidden border border-slate-200 group">
+                            <img src="sunrise1.jpg" alt="Sunrise Marketing Execution" class="w-full h-64 object-cover group-hover:scale-102 transition-transform duration-300" onerror="this.parentNode.innerHTML='<div class=\'w-full h-64 bg-slate-100 flex flex-col items-center justify-center text-slate-400 p-4\'><i class=\'fa-solid fa-file-image text-3xl mb-2\'></i><span class=\'font-medium text-sm\'>sunrise1.jpg</span><span class=\'text-xs text-center mt-1 text-slate-400\'>[Image Viewable when hosted locally]</span></div>'">
+                            <div class="p-3 text-center bg-slate-50 border-t border-slate-200 text-xs font-semibold text-slate-600">Internship Record File 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="travel-mart" class="scroll-mt-20 bg-slate-900 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 text-slate-800/20 text-9xl font-black pointer-events-none hidden lg:block">MFT26</div>
             
-            <div class="edu-item">
-                <div class="edu-title">Bachelor of Business Administration (BBA)</div>
-                <div class="edu-meta">St. Joseph's First Grade College, Mysore | 2023 - Present</div>
-                <span class="badge">Pursuing</span>
+            <div class="border-l-4 border-emerald-500 pl-4 mb-8 relative z-10">
+                <span class="text-emerald-400 text-xs font-bold tracking-widest uppercase">Special Corporate Event Portfolio</span>
+                <h2 class="text-3xl font-black tracking-tight mt-1 text-white">🧳 Mysore Travel Mart 2026</h2>
+                <p class="text-slate-400 text-sm mt-1">South India's Biggest Travel Expo</p>
             </div>
 
-            <div class="edu-item">
-                <div class="edu-title">Pre-University Course (PUC)</div>
-                <div class="edu-meta">Marimallappa PU College, Mysore | Passing Year: 2023</div>
-                <div class="edu-meta">Final Score: <strong>67%</strong></div>
-            </div>
-
-            <div class="edu-item">
-                <div class="edu-title">SSLC (10th Standard)</div>
-                <div class="edu-meta">Vidya Vardhaka Sangha, Kuvempu Nagar, Mysore | Passing Year: 2018</div>
-                <div class="edu-meta">Final Score: <strong>67%</strong></div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="grid-list">
-                <div class="grid-item">
-                    <div class="grid-item-title">Computer Proficiency</div>
-                    MS Office Suite, Basic Internet Browsing
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 bg-slate-800/50 p-6 rounded-2xl border border-slate-800 relative z-10">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-location-dot text-emerald-400 text-xl shrink-0"></i>
+                    <div>
+                        <div class="text-xs text-slate-400 uppercase font-bold">Venue</div>
+                        <div class="text-sm font-medium text-slate-200">Jaganmohan Convention Centre (JCAC), Opp. Oyster Bay, Vijayanagar 2nd Stage, Mysuru, Karnataka</div>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <div class="grid-item-title">Communications</div>
-                    Professional Email Layouts &amp; Digital Interaction
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-globe text-emerald-400 text-xl shrink-0"></i>
+                    <div>
+                        <div class="text-xs text-slate-400 uppercase font-bold">Official Web URL</div>
+                        <a href="http://www.mysoretravelmart.com" target="_blank" class="text-sm font-semibold text-blue-400 hover:underline">www.mysoretravelmart.com</a>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <div class="grid-item-title">Administration</div>
-                    Data Entry &amp; Digital Document Management
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-bolt text-emerald-400 text-xl shrink-0"></i>
+                    <div>
+                        <div class="text-xs text-slate-400 uppercase font-bold">Status Matrix</div>
+                        <div class="text-sm font-medium text-slate-200">Powered By GRS Fantasy Park</div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section>
-            <h2>Key Strengths</h2>
-            <div class="grid-list">
-                <div class="grid-item"><div class="grid-item-title">🗣️ Communication</div>Effective expression and interaction in English &amp; Kannada.</div>
-                <div class="grid-item"><div class="grid-item-title">⏱️ Time Management</div>Prioritizing complex operational tasks to meet deadlines efficiently.</div>
-                <div class="grid-item"><div class="grid-item-title">🤝 Team Collaboration</div>Maintains a highly cooperative attitude within diverse group environments.</div>
-                <div class="grid-item"><div class="grid-item-title">🧠 Mindset</div>Approaches unique corporate challenges with calm self-confidence and patience.</div>
-                <div class="grid-item"><div class="grid-item-title">📈 Adaptability</div>Proactive willingness to rapidly learn and master organizational skills.</div>
-                <div class="grid-item"><div class="grid-item-title">👂 Active Listening</div>Attentively processes core data to respond thoughtfully and accurately.</div>
+            <div class="mb-10 relative z-10">
+                <h3 class="text-lg font-bold text-slate-200 mb-3">About the Event</h3>
+                <p class="text-slate-400 leading-relaxed text-sm sm:text-base">
+                    Mysore Travel Mart 2026 is one of South India's largest travel and tourism exhibitions, bringing together tourism boards, travel agencies, hospitality brands, destination marketers, industry professionals, and travelers under one roof. The event serves as a platform for networking, business opportunities, destination promotion, and cultural exchange.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 relative z-10">
+                <div class="bg-slate-800/30 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-emerald-400 font-bold mb-4 flex items-center gap-2 text-base uppercase tracking-wider"><i class="fa-solid fa-star"></i> Event Highlights</h3>
+                    <ul class="grid grid-cols-1 gap-2.5 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-emerald-500"></i> Pre-Scheduled B2B Meetings</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-emerald-500"></i> Tourism Expo</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-emerald-500"></i> Cultural Evening Programs</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-emerald-500"></i> Destination Showcase</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-emerald-500"></i> Family & Kids Activities</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-emerald-500"></i> Tourism Industry Networking</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-emerald-500"></i> Hospitality & Travel Brand Exhibitions</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-emerald-500"></i> Tourism Excellence Awards</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-800/30 p-6 rounded-2xl border border-slate-800">
+                    <h3 class="text-emerald-400 font-bold mb-4 flex items-center gap-2 text-base uppercase tracking-wider"><i class="fa-solid fa-bolt"></i> Key Attractions</h3>
+                    <ul class="grid grid-cols-1 gap-2.5 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> South India's Biggest Travel Expo</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Tourism Industry Leaders & Experts</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Domestic & International Travel Destinations</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Cultural Performances & Entertainment</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Family-Friendly Activities</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Business Networking Opportunities</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Travel & Hospitality Exhibitors</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-gradient-to-r from-emerald-950 to-slate-900 border border-emerald-500/20 mb-12 relative z-10">
+                <div class="flex flex-wrap justify-between items-center gap-6">
+                    <div>
+                        <span class="text-xs uppercase bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded border border-emerald-500/30 font-bold tracking-wider">Premium Segment</span>
+                        <h3 class="text-xl font-bold mt-2 text-white">Mysuru Tourism Excellence Awards</h3>
+                        <p class="text-slate-400 text-sm mt-1">Conducted in institutional association with: <span class="text-slate-200 font-semibold">SKAL International Mysuru</span></p>
+                    </div>
+                    <div class="text-3xl text-emerald-400"><i class="fa-solid fa-trophy"></i></div>
+                </div>
+            </div>
+
+            <div class="mb-12 relative z-10">
+                <h4 class="text-slate-400 font-bold text-xs uppercase tracking-widest mb-6 text-center">Institutional Stakeholders & Sponsors Matrix</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/60">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Associate Partner</div>
+                        <div class="text-sm font-semibold text-slate-200 mt-1">Akshaya Motors</div>
+                    </div>
+                    <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/60">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Hospitality Partners</div>
+                        <div class="text-xs font-semibold text-slate-200 mt-1">Accor Hotels<br>Hotel Ruchi The Prince</div>
+                    </div>
+                    <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/60">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Awards Partner</div>
+                        <div class="text-sm font-semibold text-slate-200 mt-1">Quorum Hotel</div>
+                    </div>
+                    <div class="p-4 bg-slate-800/40 rounded-xl border border-slate-800/60">
+                        <div class="text-xs text-slate-500 uppercase font-bold">Supporting Bodies</div>
+                        <div class="text-[11px] leading-tight font-semibold text-slate-300 mt-1">Min. of Tourism (Govt. of India)<br>Incredible India<br>Karnataka Tourism Dept.<br>MTA | HOA</div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-slate-400 font-bold text-xs uppercase tracking-widest mb-4">Event Portfolio Documentation Gallery</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 relative z-10">
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700/60 group aspect-video">
+                    <img src="TravelExpo.jpg" alt="Expo Image 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform" onerror="this.parentNode.innerHTML='<div class=\'w-full h-full bg-slate-800 flex items-center justify-center text-slate-500 text-xs text-center p-2\'><span>TravelExpo.jpg</span></div>'">
+                </div>
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700/60 group aspect-video">
+                    <img src="TravelExpo1.jpg" alt="Expo Image 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform" onerror="this.parentNode.innerHTML='<div class=\'w-full h-full bg-slate-800 flex items-center justify-center text-slate-500 text-xs text-center p-2\'><span>TravelExpo1.jpg</span></div>'">
+                </div>
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700/60 group aspect-video">
+                    <img src="TravelExpo2.jpg" alt="Expo Image 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform" onerror="this.parentNode.innerHTML='<div class=\'w-full h-full bg-slate-800 flex items-center justify-center text-slate-500 text-xs text-center p-2\'><span>TravelExpo2.jpg</span></div>'">
+                </div>
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700/60 group aspect-video">
+                    <img src="TravelExpo3.jpg" alt="Expo Image 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform" onerror="this.parentNode.innerHTML='<div class=\'w-full h-full bg-slate-800 flex items-center justify-center text-slate-500 text-xs text-center p-2\'><span>TravelExpo3.jpg</span></div>'">
+                </div>
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700/60 group aspect-video">
+                    <img src="TravelExpo4.jpg" alt="Expo Image 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform" onerror="this.parentNode.innerHTML='<div class=\'w-full h-full bg-slate-800 flex items-center justify-center text-slate-500 text-xs text-center p-2\'><span>TravelExpo4.jpg</span></div>'">
+                </div>
+                <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700/60 group aspect-video">
+                    <img src="TravelExpo5.jpg" alt="Expo Image 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform" onerror="this.parentNode.innerHTML='<div class=\'w-full h-full bg-slate-800 flex items-center justify-center text-slate-500 text-xs text-center p-2\'><span>TravelExpo5.jpg</span></div>'">
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2>Interests &amp; Hobbies</h2>
-            <div class="grid-list">
-                <div class="grid-item"><div class="grid-item-title">🗺️ Travelling</div>Broadens global perspective and enhances real-world adaptability.</div>
-                <div class="grid-item"><div class="grid-item-title">📰 Reading</div>Keeping updated with books and news to sharpen deep analytical thinking.</div>
-                <div class="grid-item"><div class="grid-item-title">⚽ Sports</div>Instills daily operational discipline, teamwork, and competitive focus.</div>
-                <div class="grid-item"><div class="grid-item-title">🎵 Music</div>Fosters creative mental blocks and serves as excellent stress management.</div>
+        <section id="education" class="grid grid-cols-1 lg:grid-cols-3 gap-8 scroll-mt-20">
+            <div class="lg:col-span-2 space-y-6">
+                <div class="border-l-4 border-blue-600 pl-4">
+                    <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Academic Profile</h2>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-xs divide-y divide-slate-100">
+                    <div class="p-5">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-slate-950 text-base">Bachelor of Business Administration (BBA)</h3>
+                                <p class="text-slate-600 text-sm mt-0.5">St. Joseph's First Grade College, Mysore</p>
+                            </div>
+                            <span class="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full shrink-0">2023 - 2026</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-slate-950 text-base">Pre-University Course (PUC)</h3>
+                                <p class="text-slate-600 text-sm mt-0.5">Marimallappa PU College, Mysore</p>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full block">Pass Year: 2023</span>
+                                <span class="text-xs font-bold text-emerald-600 mt-1 block">Marks: 67%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-slate-950 text-base">SSLC (10th Standard)</h3>
+                                <p class="text-slate-600 text-sm mt-0.5">Vidya Vardhaka Sanga Kuvempu Nagar, Mysore</p>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full block">Pass Year: 2018</span>
+                                <span class="text-xs font-bold text-emerald-600 mt-1 block">Marks: 67%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="border-l-4 border-blue-600 pl-4">
+                    <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Technical Skills</h2>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
+                    <div>
+                        <div class="text-xs uppercase font-bold text-slate-400 tracking-wider mb-2">Core Tools</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-800 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-200">MS Word</span>
+                            <span class="bg-slate-100 text-slate-800 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-200">MS Excel</span>
+                            <span class="bg-slate-100 text-slate-800 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-200">PowerPoint</span>
+                        </div>
+                    </div>
+                    <hr class="border-slate-100">
+                    <div>
+                        <div class="text-xs uppercase font-bold text-slate-400 tracking-wider mb-2">Operations</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-800 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-200">Data Entry</span>
+                            <span class="bg-slate-100 text-slate-800 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-200">Document Management</span>
+                            <span class="bg-slate-100 text-slate-800 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-200">Internet Research</span>
+                        </div>
+                    </div>
+                    <hr class="border-slate-100">
+                    <div>
+                        <div class="text-xs uppercase font-bold text-slate-400 tracking-wider mb-2">Emerging Conceptual Frameworks</div>
+                        <div class="bg-blue-50/60 border border-blue-100 rounded-xl p-3 text-xs text-blue-900">
+                            <i class="fa-solid fa-microchip mr-1 text-blue-600"></i> Familiar with IoT and AI applications within management environments.
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2>Personal Profile</h2>
-            <p class="section-desc"><strong>Languages Known:</strong> Kannada, English</p>
-            <p class="section-desc"><strong>Nationality:</strong> Indian</p>
-            <p class="section-desc"><strong>Status:</strong> Fresh Graduate — Equipped with core administrative skills and business understanding.</p>
-            
-            <button class="connect-btn" id="greetBtn">Tap to Connect with Darshan</button>
-            <p class="counter-text">
-                This profile has received <span id="viewCounter">0</span> virtual handshakes today!
-            </p>
+        <section id="certifications" class="scroll-mt-20">
+            <div class="border-l-4 border-blue-600 pl-4 mb-8">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Certifications & Workshops</h2>
+                <p class="text-slate-500 mt-1">Continuous skill validation and training</p>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden max-w-4xl mx-auto">
+                <div class="p-6 bg-slate-50 border-b border-slate-100 flex flex-wrap justify-between items-center gap-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900">Workshop: Next Gen Technologies - Exploring IoT & Artificial Intelligence</h3>
+                        <p class="text-sm text-slate-600 mt-0.5">St. Joseph's First Grade College, Mysore</p>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-calendar mr-1"></i> Feb 2026</span>
+                </div>
+                <div class="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
+                    <div class="md:col-span-3 space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        <p>
+                            Successfully attended and qualified this expert level technology workshop. The training focused heavily on analyzing emerging modern tech infrastructures, directly highlighting cross-functional, practical applications of the <strong>Internet of Things (IoT)</strong> and <strong>Artificial Intelligence (AI)</strong> within enterprise management and modern business frameworks.
+                        </p>
+                        <div class="flex items-center gap-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                            <i class="fa-solid fa-square-check text-emerald-500"></i> Business Framework Alignment Verified
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="bg-slate-100 rounded-xl overflow-hidden border border-slate-200 group shadow-xs">
+                            <img src="iot.jpg" alt="IoT and AI Workshop Certificate" class="w-full h-44 object-cover group-hover:scale-102 transition-transform duration-300" onerror="this.parentNode.innerHTML='<div class=\'w-full h-44 bg-slate-100 flex flex-col items-center justify-center text-slate-400 p-2\'><i class=\'fa-solid fa-certificate text-3xl mb-1\'></i><span class=\'font-medium text-xs\'>iot.jpg</span><span class=\'text-[10px] text-center text-slate-400 mt-0.5\'>[Certificate Image View]</span></div>'">
+                            <div class="p-2 text-center bg-slate-50 border-t border-slate-200 text-[11px] font-semibold text-slate-500">Workshop Credentials View</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-    </div>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
+                <h3 class="font-bold text-lg text-slate-950 mb-4 border-b border-slate-100 pb-2"><i class="fa-solid fa-heart text-rose-500 mr-2"></i> Interests & HOBBIES</h3>
+                <div class="space-y-3.5 text-sm">
+                    <div class="flex items-start gap-3"><span class="text-xl">✈️</span><div><strong class="text-slate-900 block">Travelling</strong> Broadens perspective and enhances on-ground adaptability.</div></div>
+                    <div class="flex items-start gap-3"><span class="text-xl">📰</span><div><strong class="text-slate-900 block">Reading Books & Newspapers</strong> Keeps informed on market shifts and sharpens analytical thinking.</div></div>
+                    <div class="flex items-start gap-3"><span class="text-xl">⚽</span><div><strong class="text-slate-900 block">Sports</strong> Builds cross-team performance, field discipline, and a healthy competitive spirit.</div></div>
+                    <div class="flex items-start gap-3"><span class="text-xl">🎵</span><div><strong class="text-slate-900 block">Listening to Music</strong> Fosters creative thinking paradigms and dynamic stress management.</div></div>
+                </div>
+            </div>
 
-    <footer>
-        <p>© 2026 Hosted via GitHub Pages. Verified Portfolio for Darshan V Pujar.</p>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
+                <h3 class="font-bold text-lg text-slate-950 mb-4 border-b border-slate-100 pb-2"><i class="fa-solid fa-address-card text-blue-500 mr-2"></i> Personal Information Matrix</h3>
+                <table class="w-full text-sm text-left border-collapse">
+                    <tbody class="divide-y divide-slate-100 text-slate-600">
+                        <tr><td class="py-2.5 font-semibold text-slate-400 uppercase text-xs">Date of Birth</td><td class="py-2.5 text-slate-900 font-medium">01 February 2002</td></tr>
+                        <tr><td class="py-2.5 font-semibold text-slate-400 uppercase text-xs">Languages Known</td><td class="py-2.5 text-slate-900 font-medium">Kannada, English</td></tr>
+                        <tr><td class="py-2.5 font-semibold text-slate-400 uppercase text-xs">Nationality</td><td class="py-2.5 text-slate-900 font-medium">Indian</td></tr>
+                        <tr><td class="py-2.5 font-semibold text-slate-400 uppercase text-xs">Gender / Marital Status</td><td class="py-2.5 text-slate-900 font-medium">Male / Unmarried</td></tr>
+                        <tr><td class="py-2.5 font-semibold text-slate-400 uppercase text-xs">Religion Affiliation</td><td class="py-2.5 text-slate-900 font-medium">Hindu</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="contact" class="scroll-mt-20 max-w-4xl mx-auto bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-3xl p-8 border border-slate-800 shadow-xl">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <h2 class="text-3xl font-black tracking-tight">Connect With Me</h2>
+                <p class="text-slate-400 mt-2 text-sm sm:text-base">Let's discuss career opportunities, project collaborations, or organizational assignments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <a href="tel:+917204704002" class="flex items-center gap-4 bg-slate-800/80 hover:bg-blue-600/20 p-5 rounded-2xl border border-slate-800 hover:border-blue-500/40 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all text-xl shrink-0">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-bold">Call Phone Line</div>
+                        <div class="text-base font-bold text-slate-200 mt-0.5 group-hover:text-blue-400 transition-colors">+91 7204704002</div>
+                    </div>
+                </a>
+
+                <a href="mailto:darshanpujar75@gmail.com" class="flex items-center gap-4 bg-slate-800/80 hover:bg-emerald-600/20 p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-all text-xl shrink-0">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-bold">Send Direct Email</div>
+                        <div class="text-sm font-bold text-slate-200 mt-0.5 group-hover:text-emerald-400 transition-colors break-all">darshanpujar75@gmail.com</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-slate-800/60 text-center text-xs text-slate-500 space-y-2">
+                <p class="italic text-slate-400">"I hereby declare that the information provided above is true and correct to the best of my knowledge and belief."</p>
+                <div class="pt-2 flex justify-between text-[11px] font-medium max-w-md mx-auto">
+                    <span><strong>Place:</strong> Mysore, KA</span>
+                    <span><strong>Candidate:</strong> Darshan V Pujar</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-900 text-center text-xs">
+        <p>&copy; 2026 Darshan V Pujar. Powered by Tailwind Framework. All Professional Rights Reserved.</p>
     </footer>
 
-    <script>
-        let count = Math.floor(Math.random() * 15) + 8; 
-        document.getElementById('viewCounter').innerText = count;
-
-        document.getElementById('greetBtn').addEventListener('click', function() {
-            count++;
-            document.getElementById('viewCounter').innerText = count;
-            alert("Thank you for your interest! Please contact Darshan directly using the contact options listed at the top of the profile.");
-        });
-    </script>
 </body>
 </html>
